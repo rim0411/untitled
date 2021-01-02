@@ -1,0 +1,11 @@
+basic.showIcon(IconNames.SmallDiamond)
+pins.servoWritePin(AnalogPin.P0, 90)
+pins.servoWritePin(AnalogPin.P1, 90)
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.servoWritePin(AnalogPin.P1, 180)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.servoWritePin(AnalogPin.P0, 0)
+    basic.pause(500)
+})
